@@ -34,7 +34,10 @@ app.use(cors({
     origin: '*'
 }));
 const shopRouter = require('./routes/shopRoutes');
+const reciptRouter = require('./routes/reciptRoutes');
+
 app.use('/api/v1/shops',shopRouter);
+app.use('/api/v1/recipts',reciptRouter);
 
 app.all('*',(req,res,next)=>{
     console.log(req.url)
